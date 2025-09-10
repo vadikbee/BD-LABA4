@@ -11,8 +11,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib
 import base64
-import joblib # Библиотека для загрузки моделей
-import os # Для проверки существования файлов
+import joblib 
+import os 
 
 # ----- Конфигурация страницы и загрузка ресурсов -----
 
@@ -98,7 +98,7 @@ def load_model_and_vectorizer():
     
     if not os.path.exists(model_path) or not os.path.exists(vectorizer_path):
         st.error(
-            "Файлы модели не найдены! Пожалуйста, сначала запустите `python train_model.py` из командной строки, "
+            "Файлы модели не найдены! Пожалуйста, сначала запустите `train_model.py`,"
             "чтобы обучить и сохранить модель."
         )
         st.stop()
